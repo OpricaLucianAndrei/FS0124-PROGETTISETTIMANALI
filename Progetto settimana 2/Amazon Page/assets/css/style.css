@@ -1,0 +1,176 @@
+/* Your styles here */
+
+html,
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #d7dadb;
+}
+
+
+.logo {
+    background-color: #222F3F;
+    margin: 0;
+}
+
+
+.referralLink {
+    background-color: #364759;
+    padding: 20px;
+}
+
+
+.linkNavigazione {
+    color: white;
+}
+
+
+#inizioPagina {
+    width: 120px;
+    padding: 30px 15px;
+}
+
+
+#topLink {
+    text-decoration: none;
+    padding: 10px;
+}
+
+
+main {
+    margin: 20px;
+
+}
+
+
+#intro {
+    background-color: #F56600;
+    color: white;
+    text-align: center;
+}
+
+
+#intro p {
+    padding: 10px;
+}
+
+
+#titolo {
+    background-image: url(../images/bg-image.png);
+    background-repeat: repeat;
+    background-size: auto;
+    color: white;
+    text-align: center;
+
+}
+
+
+#titolo h1 {
+    padding-top: 70px;
+}
+
+
+#titolo h3 {
+    padding-bottom: 40px;
+}
+
+
+#sez2 {
+    background-color: white;
+    margin: 40px 0;
+
+}
+
+
+section p {
+    font-size: 1.3em;
+    padding: 20px;
+}
+
+
+#sez2 p {
+    margin: 0;
+    color: black;
+}
+
+
+section p a {
+    text-decoration: none;
+    color: #1D7177;
+    font-weight: bold;
+    font-size: 0.8em;
+}
+
+
+#articoli {
+    text-align: center;
+}
+
+
+#articoli article {
+    display: inline-block;
+    padding: 30px 15px;
+    width: 275px;
+    height: 350px;
+    margin: 10px;
+}
+
+#primo, #secondo, #terzo, #quarto {
+    max-width: 100%;
+    background-size: cover;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px rgb(215, 212, 212);
+}
+
+#primo {
+    background-image: url(../images/img_1.jpg);
+}
+
+#secondo {
+    background-image: url(../images/img_2.jpg);
+    background-position-x: -110px;
+}
+
+#terzo {
+    background-image: url(../images/img_3.jpg);
+     background-position-x: -100px;
+}
+
+#quarto {
+    background-image: url(../images/img_4.jpg);
+    background-position-x: -100px;
+}
+
+
+#sez3 {
+    text-align: center;
+}
+
+
+#sez3 p {
+    margin: 0;
+    padding-top: 5px;
+    padding-bottom: 40px;
+}
+
+
+.classe {
+    width: 100%;
+}
+
+
+footer {
+    text-align: center;
+    margin: 0;
+}
+
+
+#finePagina {
+    width: 200px;
+    padding: 40px;
+}
+
+
+#bottomLink {
+    font-weight: bold;
+}
