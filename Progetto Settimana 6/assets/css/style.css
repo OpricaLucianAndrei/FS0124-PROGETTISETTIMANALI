@@ -3,38 +3,53 @@ body {
     padding: 50px;
     box-sizing: border-box;
 }
-#netflixLogo{
+
+#netflixLogo {
     width: 150px;
 }
 
-#kidsIcon, #avatar {
+#kidsIcon,
+#avatar {
     width: 30px;
 }
 
 .films {
-    width: 14%;
+    /* */
     margin: 0 10px;
+}
+
+@media screen and (min-width: 768px) {
+    .films {
+        width: 14%;
+    }
 }
 
 .films img {
     max-width: 100%;
 }
 
-.carousel-control-prev, .carousel-control-next {
+.carousel-control-prev,
+.carousel-control-next {
     width: 50px;
     height: 50px;
     border-radius: 50% 50%;
     text-align: center;
 }
 
-.carousel-control-prev:hover, .carousel-control-next:hover{
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
     background-color: #E50914;
 }
 
 .logoFooter {
-    width: 25px;
-    height: 25px;
-    margin-right: 5px;
+    width: 5%;
+}
+
+@media screen and (min-width: 768px) {
+    .logoFooter {
+        width: 20%;
+        margin-right: 2px;
+    }
 }
 
 #avatarProfilo {
@@ -53,25 +68,15 @@ hr {
     width: 15%;
 }
 
-#flexCheckDefault, #flexCheckChecked {
+#flexCheckDefault,
+#flexCheckChecked {
     width: 20px !important;
     height: 20px !important;
     margin-right: 3px;
 }
 
 
-.btnFineProfilo {
-    height: 45px;
-}
-
-#btnFineProf1 {
-    width: 18%;
-}
-
-#btnFineProf2 {
-    width: 28%;    
-}
-
-#btnFineProf3 {
-    width: 48%;
+#avatarAccount {
+    width: 30px;
+    height: 30px;
 }
