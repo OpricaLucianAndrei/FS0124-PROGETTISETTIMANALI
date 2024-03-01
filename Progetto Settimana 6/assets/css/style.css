@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    padding: 50px;
+    box-sizing: border-box;
+}
+#netflixLogo{
+    width: 150px;
+}
+
+#kidsIcon, #avatar {
+    width: 30px;
+}
+
+.films {
+    width: 14%;
+    margin: 0 10px;
+}
+
+.films img {
+    max-width: 100%;
+}
+
+.carousel-control-prev, .carousel-control-next {
+    width: 50px;
+    height: 50px;
+    border-radius: 50% 50%;
+    text-align: center;
+}
+
+.carousel-control-prev:hover, .carousel-control-next:hover{
+    background-color: #E50914;
+}
+
+.logoFooter {
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+}
+
+#avatarProfilo {
+    width: 90%;
+}
+
+hr {
+    height: 5px;
+}
+
+#language {
+    width: 50%;
+}
+
+#btnEdit {
+    width: 15%;
+}
+
+#flexCheckDefault, #flexCheckChecked {
+    width: 20px !important;
+    height: 20px !important;
+    margin-right: 3px;
+}
+
+
+.btnFineProfilo {
+    height: 45px;
+}
+
+#btnFineProf1 {
+    width: 18%;
+}
+
+#btnFineProf2 {
+    width: 28%;    
+}
+
+#btnFineProf3 {
+    width: 48%;
+}
