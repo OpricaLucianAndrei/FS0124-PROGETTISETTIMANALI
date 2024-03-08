@@ -36,7 +36,7 @@
             <div class="row mb-3">
                 <div class="col-1"></div>
                 <div class="col-10 border-bottom border-bottom-2 border-black">
-                    <h1 class="display-3 fw-semibold">Edit Products</h1>
+                    <h1 class="display-3 fw-semibold"><span id="titoloH1"></span> Prodotto</h1>
                 </div>
                 <div class="col-1"></div>
             </div>
@@ -72,14 +72,14 @@
                         <div class="container">
                             <div class="row d-flex justify-content-between">
                                 <div class="col-3">
-                                    <button type="submit" class="btn btn-danger w-100 " id="btnDelete">
+                                    <button type="submit" class="btn btn-danger w-100 " id="btnDelete" onclick="cancellaProdotto()">
                                         <ion-icon name="trash-outline"></ion-icon>
-                                    </button><!--visually-hidden-->
+                                    </button>
                                 </div>
                                 <div class="col-6 d-flex justify-content-end">
-                                    <button type="submit" class="btn btn-light w-50" id="btnReset">Reset Form</button>
+                                    <button type="submit" class="btn btn-light btn-outline-dark w-50" id="btnReset">Reset Form</button>
                                     <button type="submit" class="btn btn-warning w-50" id="btnSave"
-                                        onclick="">Save</button>
+                                        >Salva</button>
                                 </div>
 
                             </div>

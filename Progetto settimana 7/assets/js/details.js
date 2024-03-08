@@ -19,7 +19,7 @@ async function loadProducts() {
     let response = await read.json();
     lista=response;
     console.log(lista);
-
+    document.getElementById("loader").style.display = "none";
     if (lista.length > 0) {
         printData();
     } else {
