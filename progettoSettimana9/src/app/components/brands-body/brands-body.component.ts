@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Post } from 'src/app/models/post';
 import { ActivatedRoute } from '@angular/router';
 
@@ -7,19 +7,23 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './brands-body.component.html',
   styleUrls: ['./brands-body.component.scss']
 })
-export class BrandsBodyComponent implements OnInit {
+export class BrandsBodyComponent  {
   postBrand!: string;
   post!: Post;
   posts: Post[] = [];
 
   constructor(private route: ActivatedRoute) {
+    console.log('test');
+    
     this.route.params.subscribe(params => {
       this.postBrand = params['brand'];
       console.log(this.postBrand); 
+      this.refreshPosts();
     });
   }
 
-  async ngOnInit(): Promise<void> {
+  
+  async refreshPosts(): Promise<void> {
     try {
       const response = await fetch('../../assets/db (1).json');
       const posts = await response.json();
@@ -29,4 +33,5 @@ export class BrandsBodyComponent implements OnInit {
       console.error('Errore nel caricamento dei dati:', error);
     }
   }
+
 }
