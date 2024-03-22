@@ -1,0 +1,28 @@
+<div class="container-fluid px-4 py-5">
+    <div class="row">
+        <h3 class="col-12 text-center my-5">Our Brands:</h3>
+        <div class="col-12 d-flex justify-content-center">
+            <div class="col-3 d-flex justify-content-center">
+                <a  class="fs-5" [routerLink]="['/brands', Ferrari]" [routerLinkActive]="['active']">
+                    <img src="{{ferrari[0].brandLogo}}" alt="ferrari logo" class="logoBrand">
+                </a>
+            </div>
+            <div class="col-3 d-flex justify-content-center">
+                <a  class="fs-5" [routerLink]="['/brands', Lamborghini]" [routerLinkActive]="['active']">
+                    <img src="{{lamborghini[0].brandLogo}}" alt="lamborghini logo" class="logoBrand">
+                </a>
+            </div>
+            <div class="col-3 d-flex justify-content-center">
+                <a  class="fs-5" [routerLink]="['/brands', Porsche]" [routerLinkActive]="['active']">
+                    <img src="{{porsche[0].brandLogo}}" alt="porsche logo" class="logoBrand">
+                </a>
+            </div>
+            <div class="col-3 d-flex justify-content-center">
+                <a  class="fs-5" [routerLink]="['/brands', RollsRoyce]" [routerLinkActive]="['active']">
+                    <img src="{{rollsRoyce[0].brandLogo}}" alt="rolls-royce logo" class="logoBrand">
+                </a>
+            </div>
+        </div>
+    </div>
+
+</div>

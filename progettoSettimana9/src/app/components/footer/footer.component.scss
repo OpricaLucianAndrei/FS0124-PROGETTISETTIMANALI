@@ -1,0 +1,44 @@
+footer {
+    background-color: #CED3D8;
+}
+
+#footerList {
+    list-style-type: none;
+}
+
+.list-group-item {
+    background-color: #CED3D8 !important;
+    border: none !important;
+    border-right: 2px solid rgb(90, 90, 90) !important;
+}
+
+.list-group-item:last-child {
+    border-right: none !important;
+}
+
+#footerList li a {
+    color: rgb(90, 90, 90);
+    text-decoration: none;
+}
+
+#footerList li a:hover {
+    color: rgb(0, 0, 0);
+}
+
+#footerList li a {
+    color: rgb(90, 90, 90);
+    text-decoration: none;
+}
+
+#footerList li a:hover {
+    color: rgb(0, 0, 0);
+}
+
+.linkContatti {
+    color: rgb(90, 90, 90) !important;
+    text-decoration: none !important;
+}
+
+.linkContatti:hover {
+    color: rgb(0, 0, 0) !important;
+}
