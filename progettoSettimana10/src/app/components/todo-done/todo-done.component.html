@@ -1,0 +1,21 @@
+<div class="container-fluid p-5">
+    <div class="row">
+        <h2 class="text-white">Completed Tasks:</h2>
+    </div>
+    <div class="row">
+        <div class="col-12" *ngFor="let todo of todos">
+            <div class="row rounded-3 p-3 my-3" *ngIf="todo.completed" id="doneTasks">
+                <div class="col-2 p-3">
+                    <div class="h-100 d-flex justify-content-center align-items-center">
+                        <input type="checkbox" [checked]="todo.completed" (change)="updateTodoStatus(todo)">
+                    </div>
+                </div>
+                <div class="col-10 p-3">
+                    <div class="row h-100 d-flex align-items-center">
+                        <h4 class="col-12 m-0">{{ todo.todo }}</h4>
+                        <p class="col-12 m-0">Asigned to: {{ getUserById(todo.userId)?.firstName }} {{ getUserById(todo.userId)?.lastName }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>

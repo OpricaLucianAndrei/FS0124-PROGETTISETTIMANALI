@@ -1,0 +1,36 @@
+<div class="container-fluid p-5">
+    <div class="row mb-4">
+        <div class="col-12 mt-5">
+            <h1 class="text-white fst-italic mb-3">Epicode To-Do list</h1>
+        </div>
+    </div>
+    <div class="row mb-4">
+        <div class="col-12">
+            <h3 class="text-white">Insert your name to discover your tasks:</h3>
+            <div class="d-flex justify-content-start">
+                <input type="text" name="searchUserName" class="form-control rounded-3 w-25" placeholder="Insert here your name" [(ngModel)]="searchUserName">
+                <button class="btn text-white me-2" id="btnSearch" (click)="searchTodos()">Search</button>
+                <button class="btn text-white mx-2" id="btnResetSearch" (click)="resetSearch()">Reset Search</button>
+            </div>
+        </div>
+    </div>
+    <div class="row mb-4">
+        <div class="col-12" *ngFor="let todo of filteredTodos">
+                <div class="row my-3 rounded-2" *ngIf="todo.todo"
+                    [ngStyle]="{ 'background-color': todo.completed ? '#98f49e' : '#f47474' }">
+                    <div class="col-2 p-4">
+                        <div class="h-100 d-flex justify-content-center align-items-center">
+                            <input type="checkbox" name="checkbox" class="checkbox" [checked]="todo.completed" (change)="updateTodoStatus(todo)">
+                        </div>
+                    </div>
+                    <div class="col-10 p-4">
+                        <div class="row h-100 d-flex align-items-center">
+                            <h4 class="col-12">{{todo.todo}}</h4>
+                            <p class="col-12">Asigned to: {{ getUserById(todo.userId)?.firstName }} {{ getUserById(todo.userId)?.lastName }} </p>
+                        </div>
+
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
