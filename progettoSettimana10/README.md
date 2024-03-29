@@ -25,3 +25,7 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+## API Utilizzata
+Preso il db.json fornito e messo su MockApi solo che il limite di dati per api è di 100 elementi quindi alcuni tasks non sono inclusi nel api e di conseguenza alcuni user isultano senza task.
