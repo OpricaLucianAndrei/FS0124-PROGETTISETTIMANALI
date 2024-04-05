@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+html, body {
+    background-color: #181818;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}@import 'mdb-angular-ui-kit/assets/scss/mdb.scss';
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
