@@ -1,1 +1,21 @@
-<p>users works!</p>
+<div class="container-fluid p-5">
+    <div class="row p-5">
+        <div class="col-12 mb-5 mt-2">
+            <h1 class="text-center text-white">Users:</h1>
+        </div>
+        <div class="col-12">
+            <div class="row d-flex justify-content-evenly">
+                <div class="card p-4 mb-3" *ngFor="let user of users">
+                    <img src="https://e7.pngegg.com/pngimages/657/594/png-clipart-computer-icons-social-media-user-person-my-account-icon-service-monochrome-thumbnail.png"
+                        class="card-img-top align-self-center " alt="profile image {{user.name}}" />
+                    <div class="card-body text-center my-4">
+                        <h5 class="card-title">{{ user.name }}</h5>
+                        <p class="card-text">{{ user.email }}</p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>

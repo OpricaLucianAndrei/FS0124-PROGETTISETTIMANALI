@@ -5,6 +5,9 @@ import { HomeComponent } from './components/home/home.component';
 import { FilmsComponent } from './components/films/films.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { LoginComponent } from './auth/login/login.component';
+import { UsersComponent } from './components/users/users.component';
+import { FavoritesComponent } from './components/favorites/favorites.component';
+import { DetailsComponent } from './components/details/details.component';
 import { AuthGuard } from './auth/auth.guard';
 
 const routes: Routes = [
@@ -28,18 +31,12 @@ const routes: Routes = [
   },
   {
     path: 'favorites',
-    loadChildren: () =>
-      import('./components/favorites/favorites.component').then(
-        (m) => m.FavoritesComponent
-      ),
+    component: FavoritesComponent,
     canActivate: [AuthGuard],
   },
   {
     path: 'users',
-    loadChildren: () =>
-      import('./components/users/users.component').then(
-        (m) => m.UsersComponent
-      ),
+    component: UsersComponent,
     canActivate: [AuthGuard],
   },
   { path: 'register', component: RegisterComponent, canDeactivate: [AuthGuard]},

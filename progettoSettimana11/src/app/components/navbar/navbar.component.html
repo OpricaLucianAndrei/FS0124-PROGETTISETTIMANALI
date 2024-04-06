@@ -23,17 +23,12 @@
                     <a class="nav-link text-secondary" [routerLink]="['']" routerLinkActive="active">Home</a>
                 </li>
                 <li class="nav-item" *ngIf="user">
-                    <a class="nav-link text-secondary" href="#">Tv Shows</a>
+                    <a class="nav-link text-secondary" [routerLink]="['/favorites']" routerLinkActive="active">My List</a>
                 </li>
                 <li class="nav-item" *ngIf="user">
-                    <a class="nav-link text-secondary" aria-current="page" href="#">Movies</a>
+                    <a class="nav-link text-secondary" [routerLink]="['/users']" routerLinkActive="active">Users</a>
                 </li>
-                <li class="nav-item" *ngIf="user">
-                    <a class="nav-link text-secondary" aria-current="page" href="#">Recently Added</a>
-                </li>
-                <li class="nav-item" *ngIf="user">
-                    <a class="nav-link text-secondary" aria-current="page" href="#">My List</a>
-                </li>
+                
 
             </ul>
             <ul class="navbar-nav me-0 mb-2 mb-lg-0">
@@ -80,6 +75,9 @@
                         <li><a class="dropdown-item text-white" [routerLink]="['/logout']" routerLinkActive="active"
                                 (click)="logout()">Signout Netflix</a></li>
                     </ul>
+                </li>
+                <li *ngIf="!user">
+                    <h4 class="p-3 fs-6 text-white">Per usufruire dei nostri servizi registrati o se sei già uno dei nostri fai il login =></h4>
                 </li>
                 <li *ngIf="!user">
                     <a [routerLink]="['/login']" routerLinkActive="active"
