@@ -22,6 +22,8 @@ import { TokenInterceptor } from './auth/token.interceptor';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { AccountComponent } from './components/account/account.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 
 @NgModule({
@@ -38,7 +40,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     FavoritesComponent,
     FooterComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    AccountComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

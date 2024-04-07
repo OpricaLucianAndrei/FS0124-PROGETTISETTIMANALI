@@ -142,17 +142,23 @@ export class FilmsService {
     // }); 
  }
 
-  addFavorite(favorite: any) {
-    let newFavorite = this.http.post(`${this.apiUrl}/favorites`, favorite);
-    console.log(newFavorite);
-    return newFavorite;
+  addFavorite(userId: number, movieId: number) {
+    let favorite = this.http.post(`${this.apiUrl}/favorites`, { userId, movieId });
+    console.log(favorite);
+    return favorite;
+
   }
 
-  deleteFavorite(id: number) {
-    let deletedFavorite = this.http.delete(`${this.apiUrl}/favorites/${id}`);
-    console.log(deletedFavorite);
-    return deletedFavorite;
+  isFavorite(movieId: number, userId: number) {
+    let favorite = this.http.get(`${this.apiUrl}/favorites?userId=${userId}&movieId=${movieId}`);
+    console.log(favorite);
+    return favorite;
   }
+ 
+  deleteFavorite(userId: number, filmId: number) {
+    return this.http.delete(`${this.apiUrl}/favorites?userId=${userId}&movieId=${filmId}`);
+  }
+  
 
   getUsers() {
     let users = this.http.get(`${this.apiUrl}/users`);

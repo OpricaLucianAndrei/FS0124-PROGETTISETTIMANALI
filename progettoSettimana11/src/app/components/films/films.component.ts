@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FilmsService } from 'src/app/service/films.service';
-import { Moviespopular } from 'src/app/interfaces/data';
+import { Favorite, Moviespopular } from 'src/app/interfaces/data';
 import { AuthService } from 'src/app/auth/auth.service';
 import { Auth } from 'src/app/interfaces/auth';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-films',
@@ -33,14 +34,19 @@ getFilms() {
 getImgUrl(url: string) {
   this.imgUrl = `https://image.tmdb.org/t/p/w500${url}`;
   return this.imgUrl;
-  
+}
 
+addToFavorites(userId: number, movieId: number) {
+  this.filmsService.addFavorite(userId, movieId ).subscribe(() => {
+    console.log('Favorite added successfully');
+  }, (error: any) => {
+    console.error('Error adding favorite:', error);
+  });
 }
 
 
-
-logout() {
-    this.authSrv.logout();
+isFavorite(movieId: number, userId: number): Observable<boolean> {
+  return this.filmsService.isFavorite(movieId, userId) as Observable<boolean>;
 }
 
 }

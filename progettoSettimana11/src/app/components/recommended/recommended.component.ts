@@ -38,4 +38,20 @@ export class RecommendedComponent {
     
   
   }
+
+
+  addToFavorites(userId: number, movieId: number) {
+    this.filmSrv.addFavorite(userId, movieId ).subscribe(() => {
+      console.log('Favorite added successfully');
+    }, (error: any) => {
+      console.error('Error adding favorite:', error);
+    });
+  }
+  
+  
+  isFavorite(movieId: number, userId: number): Observable<boolean> {
+    return this.filmSrv.isFavorite(movieId, userId) as Observable<boolean>;
+  }
+
+
 }

@@ -1,0 +1,76 @@
+<div class="container-fluid py-5">
+    <div class="row">
+        <div class="col-sm-4 col-lg-3"></div>
+        <div class="col-sm-4 col-lg-6">
+            <h1 class="text-white">Edit Profile</h1>
+            <hr class="bg-secondary mb-3">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-lg-3 col-sm-12">
+                        <img src="https://e7.pngegg.com/pngimages/657/594/png-clipart-computer-icons-social-media-user-person-my-account-icon-service-monochrome-thumbnail.png" id="avatarProfilo" alt="profile photo">
+                    </div>
+                    <div class="col-lg-9 col-sm-12">
+                        <form>
+                            <div class="input-group mb-4">
+                                <input type="text" class="form-control bg-dark text-white"
+                                    [placeholder]="user?.user?.name" aria-label="Username"
+                                    aria-describedby="basic-addon1">
+                            </div>
+                            <label for="language" class="form-label text-secondary d-block">Language:</label>
+                            <select
+                                class="text-secondary col-lg-4 col-sm-9 w-75 border border-white form-select-sm bg-black fs-6 mb-3"
+                                name="language" id="language">
+                                <option value="select" selected>English</option>
+                                <option value="select">Italiano</option>
+                                <option value="select">Espanol</option>
+                                <option value="select">Romana</option>
+                            </select>
+                            <hr class="bg-secondary mb-3">
+                            <h3 class="text-secondary d-block mb-3">Maturity Settings:</h3>
+                            <button id="btnMaturity" type="button"
+                                class="fs-5 bg-dark fw-semibold text-white mb-3 p-2 ps-3 pe-3">ALL MATURITY
+                                RATINGS</button>
+                            <p class="text-white mb-4">Show titles of <strong>all maturity ratings</strong> for
+                                this
+                                profile.</p>
+                            <button id="btnEdit" type="button"
+                                class="btnFineProfilo fs-5 w-50 bg-black border-1 border-secondary fw-semibold text-secondary">EDIT</button>
+
+
+                            <hr class="bg-secondary mb-3">
+                            <h2 class="text-secondary">Autoplay controls</h2>
+                            <div class="form-check">
+                                <input class="form-check-input bg-black border-1 border-secondary"
+                                    type="checkbox" value="" id="flexCheckDefault">
+                                <label class="form-check-label text-white" for="flexCheckDefault">
+                                    Autoplay next episode in a series on all devices.
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input bg-black border-1 border-secondary"
+                                    type="checkbox" value="" id="flexCheckChecked" checked>
+                                <label class="form-check-label text-white" for="flexCheckChecked">
+                                    Autoplay previews while browsing on all devices.
+                                </label>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <hr class="bg-secondary mb-3">
+            <div class="container-fluid">
+                <div class="row d-flex justify-content-between">
+                    <button id="btnFineProf1" type="button"
+                        class="btnFineProfilo col-sm-10 col-lg-3 fs-4  btn-light fw-semibold">SAVE</button>
+                    <button id="btnFineProf2" type="button"
+                        class="btnFineProfilo col-sm-12 col-lg-4 fs-4  bg-black border-2 border-secondary fw-semibold text-secondary">CANCEL</button>
+                    <button id="btnFineProf3" type="button"
+                        class="btnFineProfilo col-sm-12 col-lg-5 fs-4  bg-black border-2 border-secondary fw-semibold text-secondary">DELETE
+                        PROFILE</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 col-lg-3"></div>
+    </div>
+
+</div>

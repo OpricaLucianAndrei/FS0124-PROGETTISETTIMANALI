@@ -1,1 +1,10 @@
-<p>details works!</p>
+<div class="container-fluid ps-5 d-flex justify-content-start align-items-center py-5" [style.background-image]="'linear-gradient(to right, #181818 50%, rgba(255, 255, 255, 0) 100%), url(' + getImgUrl(film.poster_path) + ')'" id="filmTopMain">
+    <div class="row w-50">
+        
+        <h2 class="col-12 align-self-start text-white mb-3">{{film.title}}</h2>
+        <p class="col-12 align-self-start text-white">{{film.release_date | date:'dd/MM/y'}} | {{film.popularity}} Views | Rating: {{film.vote_average}}</p>
+        <p class="col-12 align-self-start text-white">{{film.overview}}</p>
+    </div>
+
+</div>
+

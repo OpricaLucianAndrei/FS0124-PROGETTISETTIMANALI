@@ -22,11 +22,8 @@ const routes: Routes = [
     canActivate: [AuthGuard],
   },
   {
-    path: 'details',
-    loadChildren: () =>
-      import('./components/details/details.component').then(
-        (m) => m.DetailsComponent
-      ),
+    path: 'details/:id',
+    component: DetailsComponent,
     canActivate: [AuthGuard],
   },
   {
@@ -38,6 +35,20 @@ const routes: Routes = [
     path: 'users',
     component: UsersComponent,
     canActivate: [AuthGuard],
+  },
+  {
+      path: 'account',
+      loadChildren: () =>
+          import('./components/account/account.module').then(
+              (m) => m.AccountModule
+          )
+  },
+  {
+      path: 'profilo',
+      loadChildren: () =>
+          import('./components/profile/profile.module').then(
+              (m) => m.ProfileModule
+          )
   },
   { path: 'register', component: RegisterComponent, canDeactivate: [AuthGuard]},
 
